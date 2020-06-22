@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Corazones Coloreados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script type="text/javascript">
+        document.addEventListener("mousemove", function(e) {
+            var body = document.querySelector('body');
+            var corazon = document.createElement("span");
+            var x = e.offsetX;
+            var y = e.offsetY;
+            corazon.style.left = x+'px';
+            corazon.style.top = y+'px';
+            var size = Math.random() * 100;
+            corazon.style.width = 20+size+'px';
+            corazon.style.height = 20+size+'px';
+            body.appendChild(corazon);
+
+            setTimeout(function () {
+                heart.remove();
+            }, 2000);
+        })
+    </script>
+</body>
+</html>
