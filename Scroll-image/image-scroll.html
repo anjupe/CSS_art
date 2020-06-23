@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scroll Image</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="banner">
+        <video autoplay="" muted="" loop="">
+            <source src="video.mp4" type="video/mp4">
+        </video>
+        <div id="bg"></div>
+        <script type="text/javascript">
+            let bg = document.querySelector('#bg');
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+                bg.style.backgroundSize = 100 + value*2 +"px";
+            })
+        </script>
+    </div>
+    <div class="content">Aqui va un texto y se acaba el banner evidentemente.<br> Gracias por participar en esta aventura<br></div>
+</body>
+</html>
